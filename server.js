@@ -9,6 +9,20 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+app.get('/article-one', function (req, res) {
+  res.send("Article one rquested and will be served here")
+});
+
+app.get('/article-two', function (req, res) {
+  res.send("Article two rquested and will be served here")
+});
+
+app.get('/article-three', function (req, res) {
+  res.send("Article three rquested and will be served here")
+});
+
+
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
@@ -16,6 +30,9 @@ app.get('/ui/style.css', function (req, res) {
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
+
+
+
 
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
